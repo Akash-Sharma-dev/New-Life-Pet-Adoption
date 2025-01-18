@@ -22,10 +22,9 @@ onAuthStateChanged(auth, (user) => {
         document.getElementById("logout-btn").style.display = "flex";
     }else{
         document.getElementById("logout-btn").style.display = "none";
-        const currentPage = window.location.pathname;
-
+        const currentPage = window.location.pathname.split('/').pop();
     // Apply the redirect logic only for specific pages
-    if (currentPage === '/adopt.html' && !user) {
+    if (currentPage === 'adopt.html' && !user) {
         alert("You need to be logged in to access this page.");
         window.location.href = "log.html";
     }
