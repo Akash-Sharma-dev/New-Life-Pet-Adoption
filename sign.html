@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="sign.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <main>
+        <h1>Create an Account</h1>
+        <form id="signupForm">
+            <!-- Name Field -->
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name">Name</label>
+            </div>
+
+            <!-- Email Field -->
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder=" " required>
+                <label for="password">Password</label>
+            </div>
+
+            <!-- Age Field -->
+            <div class="form-group">
+                <input type="number" id="age" name="age" placeholder=" " required>
+                <label for="age">Age</label>
+            </div>
+
+            <!-- Gender Field -->
+            <div class="form-group">
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Choose your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="gender">Gender</label>
+            </div>
+
+            <!-- Date of Birth Field -->
+            <div class="form-group">
+                <input type="date" id="dob" name="dob" placeholder=" " required>
+                <label for="dob">Date of Birth</label>
+            </div>
+
+            <!-- Signup Button -->
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <!-- Login Link -->
+        <div class="login-link" onclick="window.location.href='log.html';">
+            Already have an account? <a href="log.html">Login</a>
+        </div>
+    </main>
+    <script type="module" src="auth2.js"></script>
+</body>
+</html>

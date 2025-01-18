@@ -1,0 +1,328 @@
+/* General styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    animation: fade-in 1.5s ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header {
+    background-color: #00695c;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slide-down 0.8s ease-in-out;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    animation: fade-in 1.5s ease-in-out;
+    font-family: "Times New Roman", Times, serif;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    font-family: "Times New Roman", Times, serif;
+}
+
+nav ul li {
+    margin: 0 15px;
+    animation: slide-in 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+/* Navigation buttons and welcome container */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#welcome-container {
+    display: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.logout-btn, .login-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logout-btn:hover, .login-btn:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+.logout-btn {
+    display: none;
+}
+
+#welcomeMessage {
+    font-size: 16px;
+    color: white;
+}
+
+/* Hero section */
+#hero {
+    height: 70vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1507146426996-ef05306b995a?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHVwcHl8ZW58MHx8MHx8fDA%3D');
+    background-size: cover;
+    background-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: zoom-in 10s infinite alternate;
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Add mobile-friendly navigation styles */
+
+/* Default styles for desktop */
+/* Menu toggle button (for mobile) */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the menu by default on mobile */
+        flex-direction: column;
+        background-color: rgba(0, 105, 92, 0.9); /* Semi-transparent background */
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav ul.open {
+        display: flex; /* Show menu when toggled */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block; /* Show toggle button */
+    }
+}
+@keyframes zoom-in {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.hero-text {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 80%;
+}
+
+#cta {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+}
+
+#cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#cta button {
+    padding: 15px 30px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+#cta button:hover {
+    background-color: #ff867f;
+}
+
+/* Section styles */
+sect {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fade-in 1.5s ease-in-out;
+}
+
+sect img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+sect h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+sect p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+sect button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+sect button:hover {
+    background-color: #ff867f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+    animation: fade-in 1.5s ease-in-out;
+}

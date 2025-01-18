@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Life</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle navigation">
+               ☰
+            </button>
+            <div class="logo">New Life</div>
+            <ul class = "menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adopt.html">Adoption</a></li>
+                <li><a href="acc.html">Accessories</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="log.html">Pet Care</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            <div class = "nav-buttons" id = 'nav-buttons'>
+            <button class="login-btn" onclick="window.location.href='log.html';">Login</button>
+            <button class = "login-btn" onclick="window.location.href='sign.html';">Sign Up</button>
+            </div>
+             <div id="welcome-container">
+                <span id="welcomeMessage"></span>
+                <button class="logout-btn" id = "logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="hero-bg">
+            <h1 class="hero-text">Embrace the Journey. Every Wag of the Tail is a Step Towards Joyful Companionship.</h1>
+        </div>
+    </section>
+
+    <sect id="why-adopt">
+        <div class="content">
+            <h2>Why Adopt a Pet?</h2>
+            <p>Adopting a pet gives them a second chance at life and brings immense joy to your home. You save a life and gain unconditional love in return.</p>
+            <img src="https://images.squarespace-cdn.com/content/v1/605bdd340e42bd19667989de/1616738488720-XWMZI4OBU0VMWMUXAFKF/pexels-c-technical-6568501.jpg" alt="Why Adopt a Pet">
+            <p>Your New Best Friend Awaits. Start the Adoption Journey!</p>
+            <button onClick="window.location.href='adopt.html';">Adopt a Pet</button>
+        </div>
+
+    <sect id="accessories">
+        <div class="content">
+            <h2>Perfect Accessories for Your Pet</h2>
+            <p>Explore our wide range of accessories to keep your pet happy and healthy, from cozy beds to stylish collars.</p>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIHNEACZtTaOInzHyddeafiZ-q12ro8JJiaMRfOP5psJFQ7HLg4rmkRvs&s=10" alt="Pet Accessories">
+            <button onclick="window.location.href='acc.html';">Shop Now</button>
+        </div>
+    </sect>
+
+    <sect id="donate">
+        <div class="content">
+            <h2>Donate to Help More Pets</h2>
+            <p>Your contributions help us rescue, rehabilitate, and find loving homes for more pets. Every donation makes a difference.</p>
+            <img src="https://vspca.org/wp-content/uploads/2020/05/donate-button-600x300.png" alt="Donate for Pets">
+            <button onclick="window.location.href='donate.html';">Donate Now</button>
+        </div>
+    </sect>
+    <sect id = "about">
+        <div class = "content">
+            <h2>Our Mission</h2>
+            <p>Our mission is to connect loving homes with animals in need, promoting responsible pet ownership and providing every pet a chance for a happy, healthy life. We strive to create a world where every pet is cherished and every adoption journey is a joyful experience.</p>
+            <img src = "images/Help.jpeg" alt = "Our Mission">
+            <button onclick="window.location.href='about.html';">Know More</button>
+        </div>
+    </sect>
+
+    <footer>
+        <p>© 2025 New Life. All Rights Reserved.</p>
+    </footer>
+
+    <script type = "module" src="index.js"></script>
+    
+    <script>
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+document.querySelector('.menu').classList.toggle('open');
+});
+    </script>
+</body>
+</html>

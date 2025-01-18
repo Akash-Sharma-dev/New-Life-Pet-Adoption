@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="log.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <main>
+        <h1>Welcome Back</h1>
+        <form id="loginForm">
+            <!-- Email Field -->
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
+
+            <!-- Password Field -->
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder=" " required>
+                <label for="password">Password</label>
+            </div>
+
+            <!-- Login Button -->
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Signup Link -->
+        <div class="signup-link" onclick="window.location.href='sign.html';">
+            Don't have an account? <a href="sign.html" >Sign up</a>
+        </div>
+    </main>
+    <script type="module" src="auth2.js"></script>
+</body>
+</html>

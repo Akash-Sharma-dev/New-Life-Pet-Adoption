@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Life | Donate to Support Our Cause</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            width: 150px;
+            max-width: 100%;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #555;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .qr-code-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .qr-code {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        .qr-code img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin: 15px 0;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .qr-code {
+                padding: 15px;
+            }
+
+            .qr-code img {
+                max-width: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/donate-button-600x300.png" alt="Donate">
+    </header>
+
+    <section id="donate">
+        <h1>Donate to Support Our Cause</h1>
+        <p>Your generous donations help us provide food, shelter, and medical care to animals in need. Every contribution makes a difference!</p>
+
+        <!-- QR Code Section -->
+        <div class="qr-code-container">
+            <div class="qr-code">
+                <h2>Scan to Donate</h2>
+                <img src="images/Receive.png" alt="Donate QR Code">
+                <p>Use your phone's camera to scan this QR code and donate directly.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 New Life Pet Adoption. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

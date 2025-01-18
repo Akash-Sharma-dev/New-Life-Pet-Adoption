@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Life | Accessories</title>
+    <link rel="stylesheet" href="acc.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button class="menu-toggle" aria-label="Toggle navigation" >
+               ☰
+            </button>
+            <div class="logo">New Life</div>
+            <!-- Add this button inside the <nav> -->
+            
+            <div class = "menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adopt.html">Adoption</a></li>
+                <li><a href="acc.html">Accessories</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="log.html">Pet Care</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+            </div>
+            <button class="login-btn" id ="logout-btn" onclick="logout()">Logout</button>
+        </nav>
+    </header>
+
+    <section id="adoption">
+        <h1>Animal Accessories</h1>
+        <p id = "TagLine">Style and Comfort for Every Paw and Claw. Perfect Accessories for Your Perfect Companion</p>
+
+        <div class="filters">
+            <label for="type">Select Animal:</label>
+            <select id="type" onchange="filterPets()">
+                <option value="any">Any</option>
+                <option value="Dog">Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Rabbit">Rabbit</option>
+                <option value="Bird">Parrot</option>
+            </select>
+        </div>
+
+        <div id="pet-cards" class="pet-cards">
+            <!-- Example Pet Cards with "Adopt" buttons -->
+            <div class="pet-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdFSxHfktAKkVwzE7k8HnEGXaCJEXtYCtkCsia8QmuUdgiabENdfPhGdk&s=10.jpg" alt="Rocky">
+                <h3>Rocky</h3>
+                <p>Type: Dog</p>
+                <button class="adopt-btn">Adopt</button>
+            </div>
+            <div class="pet-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr9K9np-kDjt3iMwk8mMYZmS7Sv1nZSJ0x8LA9mFKWSpsmwXaIbJWdrr8&s=10.jpg" alt="Buddy">
+                <h3>Buddy</h3>
+                <p>Type: Dog</p>
+                <button class="adopt-btn">Adopt</button>
+            </div>
+            <div class="pet-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQka-b68GC4TgCHBy9z8U0McTTlgDJmaUiBChN0gfCFy6Od2x9GcIbmIqw&s=10.jpg" alt="Max">
+                <h3>Max</h3>
+                <p>Type: Dog</p>
+                <button class="adopt-btn">Adopt</button>
+            </div>
+            <!-- Add more pet cards here as needed -->
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 PetCare. All Rights Reserved.</p>
+    </footer>
+    <script src="acc.js"></script>
+    <script type ="module" src = "index.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const navMenu = document.querySelector('.menu ul'); // Target the <ul> inside .menu
+    navMenu.classList.toggle('open'); // Toggle the "open" class
+});
+    </script>
+</body>
+</html>

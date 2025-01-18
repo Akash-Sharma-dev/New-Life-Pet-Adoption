@@ -1,0 +1,258 @@
+/* General Styles */
+header {
+    background-color: #00695c;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 28px;
+    font-weight: bold;
+    animation: fade-in 1.5s ease-in-out;
+    font-family: "Times New Roman", Times, serif;
+}
+
+nav .menu {
+    flex-grow: 1;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    font-family: "Times New Roman", Times, serif;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    animation: slide-in 0.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: orange;
+    transform: scale(1.1);
+}
+
+nav .login-btn {
+    background-color: orange;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+nav .login-btn:hover {
+    background-color: darkorange;
+    transform: scale(1.1);
+}
+
+/* Adoption Section */
+#adoption {
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #f0f4c3, #f8f8f8);
+}
+
+.pet-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 8px;
+    margin: 20px auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.pet-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.pet-card h3 {
+    font-size: 20px;
+    color: #333;
+    animation: fade-in 1.5s ease-in-out;
+}
+
+.pet-card p {
+    font-size: 16px;
+    color: #555;
+    margin: 5px 0;
+    animation: fade-in 1.5s ease-in-out;
+}
+
+.details {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.more-details {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.story {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    margin-bottom: 10px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.details ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.details ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+.contact-info {
+    text-align: left;
+    margin: 20px auto;
+    width: 80%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.contact-info h3 {
+    color: #333;
+}
+
+.contact-info a {
+    color: #00695c;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Add mobile-friendly navigation styles */
+
+/* Default styles for desktop */
+/* Menu toggle button (for mobile) */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 105, 92, 0.9);
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #004d40;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Keyframes for Animations */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

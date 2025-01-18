@@ -1,0 +1,121 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #e8f5e9; /* Soft green background */
+    background-image: url('Screenshot_20250112_190803_Acode.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+main {
+    background-color: #ffffff; /* White background for the form */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    padding-left: 10px;
+    padding-top: 16px; /* To avoid overlap with floating label */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: #43a047; /* Green border on focus */
+}
+
+label {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    font-size: 16px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+select:focus + label,
+select:not([value=""]) + label {
+    top: -8px;
+    left: 10px;
+    font-size: 12px;
+    color: #43a047; /* Green for the floating label */
+    background-color: white;
+    padding: 0 4px; /* Add background padding to avoid overlap */
+}
+
+select {
+    background-color: white;
+    appearance: none;
+}
+
+button {
+    background-color: #43a047; /* Green button */
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #43a047;
+}
+
+.login-link a {
+    text-decoration: none;
+    color: #43a047;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+    color: #388e3c;
+}
